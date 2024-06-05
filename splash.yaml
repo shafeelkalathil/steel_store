@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#272727"
+  image: https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg
+  image_dark: https://buffer.com/library/content/images/2023/10/free-images.jpg
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#272727"
+    image: https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg
+    image_dark: https://buffer.com/library/content/images/2023/10/free-images.jpg
+
+  web: false
