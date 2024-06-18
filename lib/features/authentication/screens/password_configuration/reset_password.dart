@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:steel_store/utils/constant/size.dart';
 
 import '../../../../utils/constant/text.dart';
@@ -21,7 +20,7 @@ class ResetPassword extends StatelessWidget {
        ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSize.defaultSpace),
+          padding: const EdgeInsets.all(TSize.defaultSpace),
           child: Column(
             children: [
               Image(image:  const NetworkImage("https://learn.canva.com/wp-content/uploads/2018/08/ComposeStunningImages16.jpg")

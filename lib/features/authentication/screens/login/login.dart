@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:steel_store/common/styles/spacing_style.dart';
 import 'package:steel_store/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:steel_store/features/authentication/screens/login/widgets/login_header.dart';
-import 'package:steel_store/utils/constant/colors.dart';
 import 'package:steel_store/utils/helpers/helper_function.dart';
 
 import '../../../../common/widgets/login_signup/form_divider.dart';

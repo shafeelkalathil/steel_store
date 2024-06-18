@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:steel_store/common/widgets/images/t_rounded_images.dart';
+import 'package:steel_store/features/shop/screens/product_details/product_details.dart';
 import 'package:steel_store/utils/constant/size.dart';
 import 'package:steel_store/utils/helpers/helper_function.dart';
 
@@ -10,6 +12,7 @@ import '../../custom_shape/container/rounded_container.dart';
 import '../../icons/circular_icon.dart';
 import '../../texts/product_price_text.dart';
 import '../../texts/product_title_text.dart';
+import '../../texts/t_brand_title_with_verified_icon.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -18,9 +21,7 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDarkMode = THelperFunction.isDarkMood(context);
     return GestureDetector(
-      onTap: () {
-
-      },
+      onTap: () => Get.to(const ProductDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -42,7 +43,6 @@ class TProductCardVertical extends StatelessWidget {
                   const TRoundedImage(imageUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
                     isNetWorkImage: true,
                     applyImageRadius: true,
-
                   ),
 
                   ///sales-tag
@@ -66,24 +66,19 @@ class TProductCardVertical extends StatelessWidget {
             ),
             const SizedBox(height: TSize.spaceBtwItems /2,),
             /// details
-             Padding(
-              padding: const EdgeInsets.only(left: TSize.sm),
+             const Padding(
+              padding: EdgeInsets.only(left: TSize.sm),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const TProductTitleText(title: "Green Nike Glass",smallSize: true,),
-                const SizedBox(height: TSize.spaceBtwItems /2,),
-                Row(
-                  children: [
-                    Text("Nike", overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium,),
-                    const SizedBox(width: TSize.xs,),
-                    const Icon(Iconsax.verify5, color: TColors.primary, size: TSize.iconXs,)
-                  ],
-                ),
+                TProductTitleText(title: "Green Nike Glass",smallSize: true,),
+                SizedBox(height: TSize.spaceBtwItems /2,),
+                TBrandTitleWithVerifiedIcon(title: "Nike",),
 
               ],
             ),
             ),
+
              const Spacer(),
              Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -94,7 +89,7 @@ class TProductCardVertical extends StatelessWidget {
                   child: TProductPriceText(price: '35.5',isLarge: true),
                 ),
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: TColors.dark,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(TSize.cardRadiusMd),
@@ -114,5 +109,7 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
 
 

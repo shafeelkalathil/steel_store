@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:steel_store/common/styles/spacing_style.dart';
-import 'package:steel_store/features/authentication/screens/login/login.dart';
 
 import '../../../utils/constant/size.dart';
-import '../../../utils/constant/text.dart';
 import '../../../utils/helpers/helper_function.dart';
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});

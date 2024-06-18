@@ -9,18 +9,20 @@ import '../../../../utils/helpers/helper_function.dart';
 class TSearchContainer extends StatelessWidget {
   const TSearchContainer({
     super.key, required this.text, this.icon = Iconsax.search_normal, this.showBackground = true, this.showBorder = true,
+    this.padding = const EdgeInsets.symmetric(horizontal: TSize.defaultSpace)
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
+  final EdgeInsetsGeometry padding;
 
 
   @override
   Widget build(BuildContext context) {
     final  darkMode=THelperFunction.isDarkMood(context);
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: TSize.defaultSpace),
+      padding: padding,
       child: Container(
         width: TDeviceUtil.getScreenWidth(context),
         padding: const EdgeInsets.all(TSize.md),
