@@ -11,6 +11,7 @@ import 'package:steel_store/utils/constant/size.dart';
 
 import '../../../../common/widgets/listtile/settings_menu_tile.dart';
 import '../../../../common/widgets/listtile/user_profile_tile.dart';
+import '../../../shop/screens/order/order.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -45,7 +46,7 @@ class SettingsScreen extends StatelessWidget {
 
                   TSettingMenuTile(icon: Iconsax.safe_home,title: "My Address",subTitle: "Set shopping delivery address",onTap: ()=> Get.to(()=> const UserAddressScreen())),
                   const TSettingMenuTile(icon: Iconsax.shopping_cart,title: "My Cart",subTitle: "Add, remove products and move to checkout",),
-                  const TSettingMenuTile(icon: Iconsax.bag_tick,title: "My Orders",subTitle: "In-progress and complete orders",),
+                  TSettingMenuTile(icon: Iconsax.bag_tick,title: "My Orders",subTitle: "In-progress and complete orders",onTap: ()=> Get.to(()=> const OrderScreen())),
                   const TSettingMenuTile(icon: Iconsax.bank,title: "Bank Account",subTitle: "Withdraw balance to registered bank account",),
                   const TSettingMenuTile(icon: Iconsax.discount_shape,title: "My Coupons",subTitle: "List of all the discounted coupons",),
                   const TSettingMenuTile(icon: Iconsax.notification,title: "Notifications",subTitle: "Set any kind of notification message",),

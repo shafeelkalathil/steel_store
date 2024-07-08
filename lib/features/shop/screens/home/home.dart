@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:steel_store/common/widgets/layout/grid_layout.dart';
+import 'package:steel_store/features/shop/screens/all_products/all_products.dart';
 import 'package:steel_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:steel_store/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:steel_store/utils/constant/size.dart';
@@ -75,9 +77,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: TSize.spaceBtwSections,),
 
                   ///Heading
-                  TSectionHeading(title: "Popular Products",onPressed: () {
-
-                  },),
+                  TSectionHeading(title: "Popular Products",onPressed: ()=> Get.to(()=> const AllProducts())),
                   const SizedBox(height: TSize.spaceBtwSections,),
 
                   /// popular products

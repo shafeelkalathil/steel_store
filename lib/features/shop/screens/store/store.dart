@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:steel_store/common/widgets/custom_shape/container/search_container.dart';
 import 'package:steel_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:steel_store/common/widgets/texts/section_heading.dart';
@@ -7,10 +8,10 @@ import 'package:steel_store/features/shop/screens/store/widgets/category_tab.dar
 import 'package:steel_store/utils/constant/colors.dart';
 import 'package:steel_store/utils/constant/size.dart';
 import 'package:steel_store/utils/helpers/helper_function.dart';
-
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/appbar/tabbar.dart';
 import '../../../../common/widgets/layout/grid_layout.dart';
+import '../brand/all_brands.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -48,7 +49,7 @@ class StoreScreen extends StatelessWidget {
                       const SizedBox(height: TSize.spaceBtwItems,),
 
                       ///feature brands
-                      TSectionHeading(title: "Feature Brands",showActionButton: true,onPressed: () {},),
+                      TSectionHeading(title: "Feature Brands",showActionButton: true,onPressed:()=> Get.to(()=>const AllBrands()),),
                       const SizedBox(height: TSize.spaceBtwItems /1.5,),
 
                       TGridLayout(

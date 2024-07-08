@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:steel_store/features/shop/screens/sub_category/sub_category.dart';
 
 import '../../../utils/constant/colors.dart';
 import '../../../utils/constant/size.dart';
@@ -15,19 +17,22 @@ class TVerticalImageText extends StatelessWidget {
       child: Column(
         children: [
           ///Circular icon
-          Container(
-            width: 56,
-            height: 56,
-            padding: const EdgeInsets.all(TSize.sm),
-            decoration: BoxDecoration(
-              color: TColors.white,
-              borderRadius: BorderRadius.circular(100),
-            ),
-            child: const Center(
-              child: Image(
-                image: NetworkImage("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"),
-                fit: BoxFit.cover,
-                color: TColors.dark,
+          GestureDetector(
+            onTap: () => Get.to(()=> const SubCategoryScreen()),
+            child: Container(
+              width: 56,
+              height: 56,
+              padding: const EdgeInsets.all(TSize.sm),
+              decoration: BoxDecoration(
+                color: TColors.white,
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: const Center(
+                child: Image(
+                  image: NetworkImage("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"),
+                  fit: BoxFit.cover,
+                  color: TColors.dark,
+                ),
               ),
             ),
           ),
